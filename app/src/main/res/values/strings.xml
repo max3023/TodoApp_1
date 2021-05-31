@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">TodoApp</string>
+    <string name="add_task">ДОБАВИТЬ ЗАДАЧУ</string>
+    <string name="textAddTask">Добавить задачу</string>
+    <string name="setViewTask">Посмотреть задачу</string>
 </resources>

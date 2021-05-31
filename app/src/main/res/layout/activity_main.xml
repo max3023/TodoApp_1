@@ -8,12 +8,12 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/buttonAddTask"
+        android:id="@+id/buttonAddTask1"
         android:layout_width="145dp"
         android:layout_height="65dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="8dp"
         android:onClick="buttMeAddTask"
-        android:text="ДОБАВИТЬ ЗАДАЧУ"
+        android:text="@string/add_task"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,30 +22,44 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/labelActivityMain"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:text="Главный экран"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/headActivityMain"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="Список задач"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAddTask" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="396dp"
+        android:layout_height="635dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddTask1"
+        app:layout_constraintVertical_bias="0.913">
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTodoItems"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddTask1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
